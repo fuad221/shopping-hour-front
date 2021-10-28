@@ -1,9 +1,20 @@
+import Header from './components/Header'
+import { BrowserRouter as Router, Switch, Link, Route, NavLink } from "react-router-dom";
 
 
 function App() {
   return (
-    <div className="App">
-444444
+    <div>
+      <Router>
+      <Header />
+      <Switch>
+        <Route path="/"> Home </Route>
+        <Route path="/Header"> Home </Route>
+      </Switch>
+      </Router>
+      
+      
+
     </div>
   );
 }
