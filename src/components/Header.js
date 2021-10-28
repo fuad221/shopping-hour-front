@@ -20,7 +20,7 @@ function Header() {
                         aria-label="Search"
                     />
                     <Nav>
-                        <Dropdown>
+                        <Dropdown alignRight>
                             <Dropdown.Toggle variant="success">
                                 <FaShoppingCart color="white" fontSize="25px" />
                                 <Badge>{5}</Badge>
