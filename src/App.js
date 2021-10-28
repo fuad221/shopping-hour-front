@@ -1,4 +1,5 @@
 import Header from './components/Header'
+import './App.css';
 import { BrowserRouter as Router, Switch, Link, Route, NavLink } from "react-router-dom";
 
 
