@@ -8,6 +8,7 @@ import { AiFillDelete } from "react-icons/ai";
 
 function Header() {
     const { state: { cart }, dispatch, productDispatch, } = CartState();
+  
 
     return (
         <Navbar bg="dark" variant="dark" style={{ height: 80 }}>
