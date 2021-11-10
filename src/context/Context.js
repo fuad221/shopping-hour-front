@@ -30,7 +30,7 @@ const Context = ({ childern }) => {
   );
 };
 
-export const CardState = () => {
+export const CartState = () => {
   return useContext(Card)
 };
 

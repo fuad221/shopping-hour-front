@@ -5,6 +5,7 @@ import { FaShoppingCart } from "react-icons/fa";
 
 
 function Header() {
+    const {state: {cart } = cartState()}
     return (
         <Navbar bg="dark" variant="dark" style={{ height: 80 }}>
             <Container>
