@@ -1,11 +1,14 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
-import { Navbar, Container, FormControl, Nav, Dropdown, Badge } from 'react-bootstrap';
+import { Link, useLocation } from 'react-router-dom';
+import {Button, Navbar, Container, FormControl, Nav, Dropdown, Badge } from 'react-bootstrap';
+import { CartState } from "../context/Context";
 import { FaShoppingCart } from "react-icons/fa";
+import { AiFillDelete } from "react-icons/ai";
 
 
 function Header() {
-    const {state: {cart } = cartState()}
+    const { state: { cart },dispatch, productDispatch,} = CartState();
+
     return (
         <Navbar bg="dark" variant="dark" style={{ height: 80 }}>
             <Container>
@@ -24,7 +27,7 @@ function Header() {
                         <Dropdown alignRight>
                             <Dropdown.Toggle variant="success">
                                 <FaShoppingCart color="white" fontSize="25px" />
-                                <Badge>{5}</Badge>
+                                <Badge>{cart.length}</Badge>
                             </Dropdown.Toggle>
                         </Dropdown>
                     </Nav>
