@@ -1,8 +1,8 @@
 import React, { createContext, useContext, useReducer } from 'react'
 import faker from 'faker';
-import { cardReducer } from './Reducer'
+import { cartReducer, productReducer } from './Reducer'
 
-const Card = createContext()
+const Cart = createContext()
 
 faker.seed(99);
 
@@ -18,9 +18,9 @@ const Context = ({ childern }) => {
   }));
   // console.log(products);
 
-  const [state, dispatch] = useReducer(cardReducer, {
+  const [state, dispatch] = useReducer(cartReducer, {
     products: products,
-    card: []
+    cart: []
   });
 
   const [productState, productDispatch] = useReducer(productReducer, {
@@ -31,14 +31,14 @@ const Context = ({ childern }) => {
   });
 
   return (
-    <Card.Provider value={{ state, dispatch }}>
+    <Cart.Provider value={{ state, dispatch }}>
       {childern}
-    </Card.Provider>
+    </Cart.Provider>
   );
 };
 
 export const CartState = () => {
-  return useContext(Card)
+  return useContext(Cart)
 };
 
 export default Context

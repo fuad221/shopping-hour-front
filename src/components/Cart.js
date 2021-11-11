@@ -1,4 +1,10 @@
+import React,{useState, useEffect} from 'react'
+import Rating from './Rating';
 import { CartState } from '../context/Context'
+import { AiFillDelete } from "react-icons/ai";
+import { Button, Form, ListGroup, Row, Col,Image  } from "react-bootstrap";
+
+
 function Cart() {
     const { state: { cart }, dispatch } = CartState();
     const [total, setTotal] = useState();

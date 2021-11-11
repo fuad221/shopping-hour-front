@@ -38,7 +38,7 @@ function SingleProduct({ prod }) {
                         type: "ADD_TO_CART",
                         payload: prod
                     })
-                }} disabled={!prod.inStock}>{!prod.inStock ? "out of stock" : "Add to card"}</Button>
+                }} disabled={!prod.inStock}>{!prod.inStock ? "out of stock" : "Add to cart"}</Button>
                 ) }
 
             </Card.Body>
